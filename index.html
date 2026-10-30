@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo SENAI | Jogo da Memória</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="#" aria-label="Mundo SENAI - início">
+      <span class="marca-mundo">MUNDO</span><span class="marca-senai">SENAI</span>
+    </a>
+    <span class="topo-legenda">DESAFIO DA MEMÓRIA</span>
+  </header>
+
+  <main class="container">
+    <section class="apresentacao">
+      <p class="etiqueta">APRENDA BRINCANDO</p>
+      <h1>Jogo da Memória</h1>
+      <p class="introducao">Encontre os pares e descubra atividades e ferramentas de Logística, Eletromecânica, Mecânica, Eletroeletrônica e Desenvolvimento de Sistemas.</p>
+    </section>
+  <section class="como-jogar">
+      <h2>Como jogar?</h2>
+      <p>1. Escolha o nível de dificuldade.</p>
+      <p>2. Clique em duas cartas para revelar os símbolos.</p>
+      <p>3. Encontre todos os pares com o menor número de tentativas possível.</p>
+    </section>
+    <section class="painel">
+      <div class="configuracao">
+        <div>
+          <label for="nivel">Nível de dificuldade</label>
+          <select id="nivel">
+            <option value="facil">Fácil · 6 pares</option>
+            <option value="medio">Médio · 8 pares</option>
+            <option value="dificil">Difícil · 10 pares</option>
+          </select>
+        </div>
+        <button id="reiniciar" class="botao botao-secundario" type="button">Reiniciar jogo</button>
+      </div>
+
+      <div class="indicadores" aria-live="polite">
+        <div class="indicador"><span class="indicador-icone">🎯</span><div><small>Tentativas</small><strong id="tentativas">0</strong></div></div>
+        <div class="indicador"><span class="indicador-icone">🧩</span><div><small>Pares encontrados</small><strong id="pares">0/6</strong></div></div>
+        <div class="indicador"><span class="indicador-icone">⭐</span><div><small>Precisão</small><strong id="precisao">—</strong></div></div>
+      </div>
+
+      <div class="mensagem" id="mensagem" role="status">Escolha um nível e encontre os pares!</div>
+      <div class="tabuleiro" id="tabuleiro" aria-label="Cartas do jogo da memória"></div>
+    </section>
+
+  
+  </main>
+
+  <footer>Projeto educacional · Mundo SENAI</footer>
+  <script src="script.js"></script>
+</body>
+</html>

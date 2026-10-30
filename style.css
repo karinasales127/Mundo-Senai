@@ -1,0 +1,437 @@
+
+/* DESIGN SYSTEM - MUNDO SENAI */
+:root {
+    --primaria: #C1272C;
+    --secundaria: #FFF6EA;
+    --acao: #164194;
+    --fundo: ##C1272C;
+    --branco: #FFFFFF;
+    --cinza: #D0D0D0;
+    --preto: #282828;
+}
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--fundo);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+/* CABEÇALHO */
+
+.topo {
+    min-height: 90px;
+    padding: 15px 6%;
+    background: var(--branco);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 4px solid var(--primaria);
+    box-shadow: 0 4px 14px rgba(40,40,40,0.08);
+}
+
+.marca {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    font-size: 27px;
+    line-height: .88;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.marca-mundo {
+    color: var(--primaria);
+}
+
+.marca-senai {
+    color: var(--acao);
+}
+
+.topo-legenda {
+    color: var(--acao);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    padding: 9px 14px;
+    border: 1px solid var(--cinza);
+    border-radius: 6px;
+    background: var(--fundo);
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+.container {
+    width: min(100% - 32px, 920px);
+    margin: 42px auto 60px;
+}
+
+/* APRESENTAÇÃO */
+
+.apresentacao {
+    text-align: center;
+    margin-bottom: 28px;
+    padding: 25px 18px;
+    border-radius: 12px;
+    background: var(--branco);
+    border: 1px solid var(--cinza);
+    box-shadow: 0 6px 18px rgba(40,40,40,0.06);
+}
+
+.etiqueta {
+    display: inline-block;
+    color: var(--branco);
+    background: var(--primaria);
+    padding: 7px 13px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+}
+
+h1 {
+    margin: 12px 0 8px;
+    color: var(--preto);
+    font-size: clamp(30px, 5vw, 46px);
+}
+
+.introducao {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--preto);
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+/* PAINÉIS */
+
+.painel,
+.como-jogar {
+    background: var(--branco);
+    border: 1px solid var(--cinza);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 7px 22px rgba(40,40,40,0.07);
+}
+
+/* CONFIGURAÇÕES DO JOGO */
+
+.configuracao {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+select {
+    min-width: 220px;
+    padding: 12px 38px 12px 13px;
+    border: 1px solid var(--cinza);
+    border-radius: 5px;
+    background: var(--branco);
+    color: var(--preto);
+    font: 500 13px var(--fonte);
+}
+
+/* BOTÕES */
+
+.botao {
+    border: 1px solid var(--primaria);
+    border-radius: 5px;
+    padding: 13px 18px;
+    font: 700 12px var(--fonte);
+    cursor: pointer;
+    transition: .2s;
+}
+
+.botao-secundario {
+    color: var(--branco);
+    background: var(--primaria);
+}
+
+.botao-secundario:hover {
+    background: #A91F24;
+    transform: translateY(-2px);
+}
+
+/* INDICADORES */
+
+.indicadores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 22px 0 16px;
+}
+
+.indicador {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 14px;
+    border-radius: 7px;
+    border: 1px solid var(--cinza);
+    background: var(--fundo);
+}
+
+.indicador:nth-child(1) {
+    border-top: 4px solid var(--primaria);
+}
+
+.indicador:nth-child(2) {
+    border-top: 4px solid var(--acao);
+}
+
+.indicador:nth-child(3) {
+    border-top: 4px solid var(--preto);
+}
+
+.indicador-icone {
+    font-size: 24px;
+}
+
+.indicador small {
+    display: block;
+    color: var(--preto);
+    font-size: 10px;
+    margin-bottom: 4px;
+}
+
+.indicador strong {
+    font-size: 18px;
+}
+
+/* MENSAGEM */
+
+.mensagem {
+    min-height: 44px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 11px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    background: var(--secundaria);
+    border: 1px solid var(--cinza);
+    border-left: 4px solid var(--primaria);
+    color: var(--preto);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* TABULEIRO */
+
+.tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+/* CARTAS */
+
+.carta {
+    min-height: 142px;
+    border: 2px solid var(--acao);
+    border-radius: 8px;
+    background: var(--acao);
+    color: var(--branco);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    font-family: var(--fonte);
+    box-shadow: 0 4px 10px rgba(22,65,148,0.12);
+    transition: .2s;
+}
+
+.carta:hover:not(:disabled) {
+    transform: translateY(-3px);
+    background: var(--primaria);
+    border-color: var(--primaria);
+}
+
+.carta .verso {
+    font-size: 35px;
+    font-weight: 800;
+    color: var(--branco);
+}
+
+.carta .frente {
+    display: none;
+}
+
+/* CARTAS REVELADAS */
+
+.carta.revelada,
+.carta.encontrada {
+    background: var(--secundaria);
+    border-color: var(--primaria);
+    color: var(--preto);
+    cursor: default;
+}
+
+.carta.revelada .verso,
+.carta.encontrada .verso {
+    display: none;
+}
+
+.carta.revelada .frente,
+.carta.encontrada .frente {
+    display: block;
+}
+
+/* IMAGENS DAS CARTAS */
+
+.imagem-carta {
+    display: block;
+    width: 100%;
+    max-width: 112px;
+    height: 78px;
+    object-fit: contain;
+    margin: 0 auto 4px;
+    border-radius: 5px;
+}
+
+.carta .nome {
+    display: block;
+    font-size: 10px;
+    font-weight: 800;
+    color: var(--preto);
+}
+
+.carta .curso {
+    display: block;
+    margin-top: 3px;
+    color: var(--acao);
+    font-size: 8px;
+    font-weight: 700;
+}
+
+/* PARES ENCONTRADOS */
+
+.carta.encontrada {
+    background: var(--secundaria);
+    border: 3px solid var(--acao);
+    box-shadow: 0 4px 12px rgba(22,65,148,0.12);
+}
+
+/* COMO JOGAR */
+
+.como-jogar {
+    margin-top: 20px;
+    border-top: 4px solid var(--acao);
+}
+
+.como-jogar h2 {
+    margin: 0 0 12px;
+    font-size: 17px;
+    color: var(--primaria);
+}
+
+.como-jogar p {
+    margin: 7px 0;
+    color: var(--preto);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* RODAPÉ */
+
+footer {
+    text-align: center;
+    padding: 22px;
+    color: var(--preto);
+    font-size: 11px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+
+    .topo {
+        padding: 15px 20px;
+    }
+
+    .topo-legenda {
+        font-size: 9px;
+    }
+
+    .container {
+        margin-top: 28px;
+    }
+
+    .painel,
+    .como-jogar {
+        padding: 16px;
+    }
+
+    .indicadores {
+        gap: 7px;
+    }
+
+    .indicador {
+        padding: 9px 6px;
+        gap: 6px;
+    }
+
+    .indicador-icone {
+        font-size: 18px;
+    }
+
+    .indicador small {
+        font-size: 8px;
+    }
+
+    .indicador strong {
+        font-size: 15px;
+    }
+
+    .tabuleiro {
+        gap: 7px;
+    }
+
+    .carta {
+        min-height: 116px;
+    }
+
+    .imagem-carta {
+        max-width: 84px;
+        height: 62px;
+    }
+
+    .carta .nome {
+        font-size: 8px;
+    }
+
+    .carta .curso {
+        font-size: 7px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .carta {
+        min-height: 104px;
+    }
+
+    .imagem-carta {
+        max-width: 70px;
+        height: 52px;
+    }
+
+    .carta .nome {
+        font-size: 7px;
+    }
+}

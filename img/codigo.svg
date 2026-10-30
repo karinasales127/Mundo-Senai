@@ -1,0 +1,44 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160">
+  <rect width="200" height="160" rx="18" fill="#EAF1FF"/>
+
+  <!-- Círculo de fundo -->
+  <circle cx="100" cy="70" r="42" fill="#FFFFFF" stroke="#C1272C" stroke-width="3"/>
+
+  <!-- Monitor -->
+  <rect x="65" y="45" width="70" height="48" rx="5"
+        fill="#164194" stroke="#282828" stroke-width="2"/>
+
+  <rect x="71" y="51" width="58" height="36" rx="2"
+        fill="#FFF6EA"/>
+
+  <!-- Símbolos de código -->
+  <path d="M88 61 L80 69 L88 77"
+        fill="none" stroke="#C1272C" stroke-width="4"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M112 61 L120 69 L112 77"
+        fill="none" stroke="#164194" stroke-width="4"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M105 58 L95 80"
+        fill="none" stroke="#282828" stroke-width="3"
+        stroke-linecap="round"/>
+
+  <!-- Base do monitor -->
+  <path d="M100 93 V104 M85 105 H115"
+        fill="none" stroke="#282828" stroke-width="4"
+        stroke-linecap="round"/>
+
+  <!-- Teclado -->
+  <rect x="75" y="109" width="50" height="8" rx="3"
+        fill="#C1272C"/>
+
+  <path d="M84 113 H116"
+        stroke="#FFFFFF" stroke-width="2"
+        stroke-linecap="round"/>
+
+  <!-- Detalhes -->
+  <circle cx="145" cy="38" r="5" fill="#C1272C"/>
+  <circle cx="52" cy="100" r="4" fill="#164194"/>
+</svg>
